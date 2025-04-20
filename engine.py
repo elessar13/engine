@@ -1,3 +1,13 @@
+import torch
+import matplotlib.pyplot as plt
+import numpy as np
+
+from torch import nn
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
+
+
 def train_step(model: torch.nn.Module,
                data_loader: torch.utils.data.DataLoader,
                loss_fn: torch.nn.Module,
